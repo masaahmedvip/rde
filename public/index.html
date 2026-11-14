@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2b">
+  <title>مختبر Proxmox | لوحة تجريبية</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark">P</span><span>مختبر <b>Proxmox</b></span></a>
+      <p class="side-label">القائمة</p>
+      <a class="nav-item active" href="#overview"><span>▦</span> نظرة عامة</a>
+      <a class="nav-item" href="#machines"><span>▣</span> الأجهزة الافتراضية</a>
+      <a class="nav-item" href="#storage"><span>▤</span> التخزين</a>
+      <div class="sidebar-note"><span class="pulse"></span><div><b>وضع العرض التجريبي</b><small>لا يوجد اتصال بخادم حقيقي</small></div></div>
+      <a class="github-link" href="https://github.com/masaahmedvip/rde" target="_blank" rel="noreferrer">المستودع على GitHub ↗</a>
+    </aside>
+
+    <main id="overview" class="main">
+      <header class="topbar"><div><span class="eyebrow">مختبر منزلي / لوحة التحكم</span><h1>نظرة عامة</h1></div><button id="refresh" class="refresh">↻ <span>تحديث العرض</span></button></header>
+      <div class="demo-banner"><span class="info-icon">i</span><span><b>بيانات توضيحية فقط.</b> هذه الواجهة نموذج أولي ولا تتصل بـ Proxmox أو تدير أجهزة فعلية.</span></div>
+
+      <section class="metrics" aria-label="ملخص الموارد">
+        <article class="metric"><div class="metric-head"><span>العقدة</span><span class="metric-icon purple">⌂</span></div><strong>pve-lab</strong><small><i class="status-dot"></i> متصلة · بيانات تجريبية</small></article>
+        <article class="metric"><div class="metric-head"><span>المعالج</span><span class="metric-icon blue">⌁</span></div><strong>24<span class="unit">%</span></strong><div class="bar"><i style="width:24%"></i></div></article>
+        <article class="metric"><div class="metric-head"><span>الذاكرة</span><span class="metric-icon teal">▥</span></div><strong>6.2 <span class="unit">/ 16 GB</span></strong><div class="bar teal-bar"><i style="width:39%"></i></div></article>
+        <article id="storage" class="metric"><div class="metric-head"><span>التخزين</span><span class="metric-icon orange">▤</span></div><strong>128 <span class="unit">/ 512 GB</span></strong><div class="bar orange-bar"><i style="width:25%"></i></div></article>
+      </section>
+
+      <section id="machines" class="panel">
+        <div class="panel-heading"><div><h2>الأجهزة الافتراضية</h2><p>عينة توضيحية لحالة الأجهزة</p></div><span class="count">3 أجهزة</span></div>
+        <div class="table-wrap"><table><thead><tr><th>الاسم</th><th>المعرّف</th><th>النوع</th><th>الحالة</th><th>الموارد</th></tr></thead><tbody>
+          <tr><td><span class="vm-icon">▣</span> Home Assistant</td><td>100</td><td>VM</td><td><span class="badge running">● تعمل</span></td><td>2 vCPU · 4 GB</td></tr>
+          <tr><td><span class="vm-icon container">▰</span> Debian Services</td><td>101</td><td>LXC</td><td><span class="badge running">● تعمل</span></td><td>2 vCPU · 2 GB</td></tr>
+          <tr><td><span class="vm-icon">▣</span> Test VM</td><td>102</td><td>VM</td><td><span class="badge stopped">● متوقفة</span></td><td>4 vCPU · 8 GB</td></tr>
+        </tbody></table></div>
+      </section>
+      <footer>واجهة تعليمية تجريبية · لا تدخل كلمات مرور أو مفاتيح API في هذا النموذج.</footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

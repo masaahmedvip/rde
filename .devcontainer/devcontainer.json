@@ -1,0 +1,11 @@
+{
+  "name": "Proxmox Lab Dashboard",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Proxmox Lab Dashboard",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}

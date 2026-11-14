@@ -1,0 +1,9 @@
+{
+  "name": "proxmox-lab-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "واجهة عربية تجريبية لمتابعة مختبر Proxmox داخل GitHub Codespaces",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
